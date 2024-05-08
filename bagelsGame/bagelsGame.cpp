@@ -18,11 +18,13 @@ void generateHints(std::string userGuess, std::string randomNum) {
     int clueCount=0;
 
     for (int i = 0; i < 3; i++) {
+        //Loop through looking for matching numbers and placment. 
         if (userGuess[i] == randomNum[i]) {
             cout << "Pico ";
             clueCount++;
         }
         else {
+            //Loop through to number exists in sequence.
             for (int j = 0; j < 3; j++) {
                 if (userGuess[i] == randomNum[j]) {
                     cout << "Fermi ";
@@ -71,7 +73,7 @@ int main() {
 
         cout << "\n";
     }
-
+    
     cout << "\n";
     return 0;
 }
