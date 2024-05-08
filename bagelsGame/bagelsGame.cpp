@@ -41,12 +41,18 @@ void generateHints(std::string userGuess, std::string randomNum) {
 }
 
 bool replayGame() {
-    char response;
+    std::string userResponse;
 
-    cout << "\n\nWould you like to play again y/n? : ";
-    cin >> response;
+    do {
+        cout << "\n\nWould you like to play again y/n? : ";
+        cin >> userResponse;
 
-    if (response == 'y') {
+        if (std::tolower(userResponse[0]) != 'y' && std::tolower(userResponse[0]) != 'n') {
+            cout << "\nInvalid selection, please try again.";
+        }
+    } while (std::tolower(userResponse[0]) != 'y' && std::tolower(userResponse[0]) != 'n');
+
+    if (std::tolower(userResponse[0]) == 'y') {
         return 1;
     }
     else {
