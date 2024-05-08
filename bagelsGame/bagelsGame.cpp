@@ -5,6 +5,10 @@
 using std::cout;
 using std::cin;
 
+std::string generateHints(std::string userGuess, std::string randomNum) {
+
+}
+
 int main() {
     std::string userGuess, randomNum="123";
     int guessCount;
@@ -23,36 +27,14 @@ int main() {
     cout << "You have 10 guesses to get it\n";
 
     guessCount = 1;
-
-    do {
-
-        cout << "Guess #" << guessCount << "\n" << ">";
-        cin >> userGuess;
-        guessCount++;
-
-    } while (guessCount <= 2 && winCond==0);
-
-    /*
-    for (int i = 1; i <= 2; i++) {
-        cout << "Guess #" << i << "\n"<<">";
-        cin >> userGuess;
-        
-        if (userGuess == randomNum) {
-            cout << "Winner";
-        }
-        else {
-            for (int j = 0; j < userGuess.length(); j++) {
-                if (userGuess[j] == randomNum[j]) {
-                    cout << "Pico ";
-                }
-            }
-        }
-
-        cout << "\n";
-
+    cin >> userGuess;
+    
+    if (userGuess == randomNum) {
+        cout << "You win!";
     }
-    */
-
+    else {
+        generateHints(userGuess, randomNum);
+    }
 
     return 0;
 }
