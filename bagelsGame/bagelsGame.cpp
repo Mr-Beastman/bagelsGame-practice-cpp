@@ -34,7 +34,7 @@ void generateHints(std::string userGuess, std::string randomNum) {
         }
     }
 
-    //Quick check if any clues were provided and supplies final clue if needed.
+    //Check if any clues were provided and displays Bagels for no correct numbers.
     if (clueCount == 0) {
         cout << "Bagels";
     }
@@ -44,7 +44,7 @@ bool replayGame() {
     std::string userResponse;
 
     do {
-        cout << "\n\nWould you like to play again y/n? : ";
+        cout << "\nWould you like to play again y/n? : ";
         cin >> userResponse;
 
         if (std::tolower(userResponse[0]) != 'y' && std::tolower(userResponse[0]) != 'n') {
@@ -81,21 +81,24 @@ int main() {
 
         cout << "\nI have thought of a number.\n";
         cout << "You have 10 guesses to get it\n";
-        cout << randomNum<<"\n";
+        //cout << randomNum<<"\n";
 
-        for (int guessCount = 1; guessCount <= 10; guessCount++) {
+        for (int guessCount = 1; guessCount < 11; guessCount++) {
 
             cout << "Guess #" << guessCount << "\n";
             cin >> userGuess;
 
             if (userGuess == randomNum) {
-                cout << "You win!";
+                cout << "\nCongratulations! You win!\n";
                 break;
+            }
+            else if (guessCount ==10) {
+                cout << "\nGuess limit exceded. Better luck next time!\n";
+                cout << "The correct answer was " << randomNum << "\n";
             }
             else {
                 generateHints(userGuess, randomNum);
             }
-
             cout << "\n";
         }
 
@@ -104,5 +107,6 @@ int main() {
     } while (replay == 1);
     
     cout << "\n";
+    cout << "Thanks for Playing!\n";
     return 0;
 }
