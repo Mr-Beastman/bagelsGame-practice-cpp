@@ -6,6 +6,6 @@ This is my attempt at completing the first program in "The Big Book of Small Pyh
 This was an extra challange I set for myself along side studying C++ with Yoobee College of Creative Innovation, to help pratice and drive home what I have been learning. With the added advantage of getting used to github<br>
 <br>
 These practice projects are made to the best of my knowledge at the time, and I look forward to coming back to them as my knowledge grows. In the mean time any and all feed back is greatly appreciated.<br>
-<br>23/08/2024 Came back and update this project based on current level of understanding, was fun to see the comparrison in such a short time.<br>
+<br>23/08/2024 Came back and updated this project based on current level of understanding, was fun to see the comparrison in such a short time.<br>
 <br>
 Have a nice day!
